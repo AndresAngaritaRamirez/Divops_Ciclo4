@@ -6,8 +6,8 @@ Desarrollo de un sistema de información que soporte la gestión de una tienda o
 
 | Integrante | Rol |
 |------------|-----|
-|Daniel Felipe Varon Molina |Scrum máster|
+|Daniel Felipe Varon Molina |Administrador de BD|
 |Carlos Julián Reyes Piraligua |Analista|
 |Diana Camila Capera Conde |Product owner|
 |Ivan Daniel Silva Oyola |Desarrollador|
-|Alvaro Andres Angarita Ramirez|Administrador de BD|
+|Alvaro Andres Angarita Ramirez|Scrum máster|
