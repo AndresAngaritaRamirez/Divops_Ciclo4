@@ -12,4 +12,6 @@ Desarrollo de un sistema de información que soporte la gestión de una tienda o
 |Ivan Daniel Silva Oyola |Desarrollador|
 |Alvaro Andres Angarita Ramirez|Scrum máster|
 
+#Pull request de Andres
+
 Todos los derechos reservados DivOps 2022 &copy;
