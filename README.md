@@ -14,4 +14,6 @@ Desarrollo de un sistema de información que soporte la gestión de una tienda o
 
 En este ciclo se realizará programación web haciendo uso de MERN, MongoDb, Express JS, React y NodeJS
 
+#Pull request de Andres
+
 Todos los derechos reservados DivOps 2022 &copy;
