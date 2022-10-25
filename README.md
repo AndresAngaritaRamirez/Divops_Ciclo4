@@ -21,3 +21,8 @@ En este ciclo se realizará programación web haciendo uso de MERN, MongoDb, Exp
 #Pull request de Camila
 
 Todos los derechos reservados DivOps 2022 &copy;
+
+Para trabaja en local, recuerden instalar dependencias con el comando:
+	
+	npm install
+
