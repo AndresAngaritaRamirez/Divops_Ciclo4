@@ -13,3 +13,8 @@ Desarrollo de un sistema de información que soporte la gestión de una tienda o
 |Alvaro Andres Angarita Ramirez|Scrum máster|
 
 Todos los derechos reservados DivOps 2022 &copy;
+
+Para trabaja en local, recuerden instalar dependencias con el comando:
+	
+	npm install
+
