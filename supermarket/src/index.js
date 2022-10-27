@@ -1,20 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { Principal } from './components/Principal';
+import { Header } from './components/Header';
 import * as bootstrap from 'bootstrap';
+import './styles/navs.css'
+import './styles/estilos.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(<>
-    <div className='container'>
-        <div className='card'>
-            <div className='card-header'>
-                <h1>React Bootstrap</h1>
-            </div>
-            <div className='card-body'>
-                <p>Bootstrap is a popular CSS framework.</p>
-            </div>
-        </div>
+    <Header />
+    <div className='container navs'>
+            <Principal />
     </div>
 </>
 )
