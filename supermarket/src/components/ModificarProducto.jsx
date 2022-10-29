@@ -1,6 +1,41 @@
+import Table from 'react-bootstrap/Table'
+import {productos} from '../Data/Data'
+import Button from 'react-bootstrap/Button';
+
 export function ModificarProducto(){
 
     return (
-        <h1>Hola Mundo desde producto</h1>
+        <Table striped bordered hover>
+    <thead>
+        <tr>
+        <th>#id</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Cantidad en stock</th>
+        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {
+            productos.map( data => {
+                return (
+                    <>
+                        <tr>
+                            <td>{data.id}</td>
+                            <td>{data.nombre}</td>
+                            <td>{data.preciounidad}</td>
+                            <td>{data.cantidad}</td>
+                            <td><Button variant="primary">Modificar</Button>{' '}</td>
+                        </tr>
+                    </>
+                )
+            })
+
+        }
+        
+    
+        
+    </tbody>
+    </Table>
     )
 }

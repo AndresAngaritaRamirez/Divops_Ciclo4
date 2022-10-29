@@ -1,19 +1,20 @@
 import Table from 'react-bootstrap/Table'
 import {productos} from '../Data/Data'
+import Button from 'react-bootstrap/Button';
 
 export function Productos(){
 
     return (
         <Table striped bordered hover>
-      <thead>
+    <thead>
         <tr>
-          <th>#id</th>
-          <th>Nombre</th>
-          <th>Precio</th>
-          <th>Cantidad en stock</th>
+        <th>#id</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Cantidad en stock</th>
         </tr>
-      </thead>
-      <tbody>
+    </thead>
+    <tbody>
         {
             productos.map( data => {
                 return (
@@ -23,6 +24,7 @@ export function Productos(){
                             <td>{data.nombre}</td>
                             <td>{data.preciounidad}</td>
                             <td>{data.cantidad}</td>
+                            <td><Button variant="primary">Agregar al carrito</Button>{' '}</td>
                         </tr>
                     </>
                 )
@@ -30,9 +32,9 @@ export function Productos(){
 
         }
         
-     
+    
         
-      </tbody>
+    </tbody>
     </Table>
     )
 }

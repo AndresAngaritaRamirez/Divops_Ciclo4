@@ -10,9 +10,10 @@ import './Styles/estilos.css'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(<>
-  <Header />
-  <div className='container navs'>
+    <Header />
+    <div className='container navs'>
     <Principal />
-  </div>
+    </div>
+    
 </>
 )

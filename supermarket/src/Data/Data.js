@@ -9,5 +9,5 @@ export const productos = [
     {'id': '08', 'nombre':'Queso', 'preciounidad': 10000, 'cantidad': 30},
     {'id': '09', 'nombre':'Arequipe', 'preciounidad': 7000, 'cantidad': 120},
     {'id': '10', 'nombre':'Pepsi', 'preciounidad': 20000, 'cantidad': 200}
-   
+
 ]

@@ -3,6 +3,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import {Productos} from './Productos';
 import { ModificarProducto } from './ModificarProducto';
 import { Ventas } from './Ventas';
+import {Carrito} from './Carrito'
 
 export function Principal() {
 
@@ -26,6 +27,9 @@ export function Principal() {
       </Tab>
       <Tab eventKey="longer-tab" title="Lista ventas">
         <Ventas />
+      </Tab>
+      <Tab eventKey="carrito" title="Carrito">
+        <Carrito />
       </Tab>
     </Tabs>
     </div>
