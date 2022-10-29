@@ -1,26 +1,33 @@
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import {Productos} from './Productos';
+import { ModificarProducto } from './ModificarProducto';
+import { Ventas } from './Ventas';
+
 export function Principal() {
-    return (
-    <div className="container">
-        <div className="card">
-            <div className="card-header">
-                <ul class="nav nav-pills nav-fill">
-                    <li class="nav-item">
-                        <button id="listaProductos" className="nav-link active" aria-current="page" onClick={()=>alert("??????")}>Lista productos</button>
-                    </li>
-                <li class="nav-item">
-                        <button class="nav-link" onClick={
-                            ()=>alert("Deberia hacer algo")
-                            }>Modificar productos</button>
-                </li>
-                <li class="nav-item">
-                        <button class="nav-link" onClick={()=>alert("No funciona lo que intente")}>Lista ventas</button>
-                </li>
-                </ul>
-            </div>
-            <div className="card-body">
-                <h5 className="card-title">Special title treatment</h5>
-            </div>
-        </div>
+
+  const selected = (eventKey) => {
+    alert(`selected ${eventKey}`);
+  }
+
+	return (
+	<div className="container border">
+		<Tabs
+      defaultActiveKey="profile"
+      id="justify-tab-example"
+      className="mb-3"
+      justify
+      >
+      <Tab eventKey="home" title="Lista productos">
+        <Productos />
+      </Tab>
+      <Tab eventKey="profile" title="Modificar productos">
+        <ModificarProducto />
+      </Tab>
+      <Tab eventKey="longer-tab" title="Lista ventas">
+        <Ventas />
+      </Tab>
+    </Tabs>
     </div>
-    );
+	);
 }
