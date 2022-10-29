@@ -1,8 +1,7 @@
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import {Productos} from './Productos';
-import { ModificarProducto } from './ModificarProducto';
-import { Ventas } from './Ventas';
+import {ProductosCliente} from './ProductosCliente';
+import { Carrito } from './Carrito';
 
 export function Principal() {
 
@@ -19,13 +18,10 @@ export function Principal() {
       justify
       >
       <Tab eventKey="home" title="Lista productos">
-        <Productos />
+        <ProductosCliente />
       </Tab>
-      <Tab eventKey="profile" title="Modificar productos">
-        <ModificarProducto />
-      </Tab>
-      <Tab eventKey="longer-tab" title="Lista ventas">
-        <Ventas />
+      <Tab eventKey="profile" title="Carrito">
+        <Carrito />
       </Tab>
     </Tabs>
     </div>
