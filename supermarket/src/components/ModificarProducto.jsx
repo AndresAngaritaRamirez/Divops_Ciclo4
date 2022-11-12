@@ -3,7 +3,8 @@ import {productos} from '../Data/Data'
 import Button from 'react-bootstrap/Button';
 
 export function ModificarProducto(){
-
+    let productosV = productos
+    localStorage.setItem('productos', JSON.stringify(productosV))
     return (
         <Table striped bordered hover>
     <thead>
@@ -17,7 +18,7 @@ export function ModificarProducto(){
     </thead>
     <tbody>
         {
-            productos.map( data => {
+            productosV.map( data => {
                 return (
                     <>
                         <tr>
@@ -25,7 +26,10 @@ export function ModificarProducto(){
                             <td>{data.nombre}</td>
                             <td>{data.preciounidad}</td>
                             <td>{data.cantidad}</td>
-                            <td><Button variant="primary" href="/modificar">Modificar</Button>{' '}</td>
+                            <td><Button variant="primary"  onClick={() => {
+                                let producto = productos[parseInt(data.id-1)]
+                                localStorage.setItem('seleccionado', JSON.stringify(producto))
+                            }} href="/modificar">Modificar</Button>{' '}</td>
                         </tr>
                     </>
                 )

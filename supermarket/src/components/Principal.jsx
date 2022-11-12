@@ -6,6 +6,9 @@ import {Admin} from '../views/Admin'
 import { Fragment } from "react"
 import {Login} from "../views/Login"
 import { Modificar } from '../views/Modificar';
+import { Carrito } from './Carrito';
+import { Productos } from './Productos';
+import { ModificarProducto } from './ModificarProducto';
 
 export const Principal = () => {
 
@@ -16,6 +19,10 @@ export const Principal = () => {
         <Route path="/cliente" element={<Cliente/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/modificar" element={<Modificar/>}/>
+        <Route path="/carrito" element={<Carrito/>}/>
+        <Route path="/productos" element={<Productos/>}/>
+        <Route path="/modificarProducto" element={<ModificarProducto/>}/>
+
       </Fragment>
     </Routes>
 	// <div className="container border">
@@ -41,3 +48,4 @@ export const Principal = () => {
   //   </div>
 	);
 }
+

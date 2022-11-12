@@ -2,7 +2,7 @@ export const Header=()=>{
     return (
         <header>
         <div className="wrapper">
-            <div className="logo">Logo de divops</div>
+            <div className="logo">DivOps Company</div>
             <nav>
                 <a href="/Cliente">Cliente</a>
                 <a href="/Admin">Admin</a>
