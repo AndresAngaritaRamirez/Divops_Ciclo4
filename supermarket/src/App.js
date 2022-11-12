@@ -1,12 +1,12 @@
 import {BrowserRouter} from 'react-router-dom';
 import {Header} from './components/Header';
-import {Principal} from './components/Principal';
+import {Login} from './views/Login';
 
 function App(){
     return(
         <BrowserRouter>
             <Header />
-            <Principal/>
+            <Login/>
         </BrowserRouter>
     );
 }
