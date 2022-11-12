@@ -6,14 +6,13 @@ import { Header } from './components/Header';
 import * as bootstrap from 'bootstrap';
 import './Styles/navs.css'
 import './Styles/estilos.css'
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(<>
-    <Header />
-    <div className='container navs'>
-    <Principal />
-    </div>
-    
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 </>
-)
+);

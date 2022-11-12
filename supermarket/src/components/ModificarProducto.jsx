@@ -25,16 +25,13 @@ export function ModificarProducto(){
                             <td>{data.nombre}</td>
                             <td>{data.preciounidad}</td>
                             <td>{data.cantidad}</td>
-                            <td><Button variant="primary">Modificar</Button>{' '}</td>
+                            <td><Button variant="primary" href="/modificar">Modificar</Button>{' '}</td>
                         </tr>
                     </>
                 )
             })
 
         }
-        
-    
-        
     </tbody>
     </Table>
     )

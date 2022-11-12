@@ -31,9 +31,6 @@ export function Productos(){
             })
 
         }
-        
-    
-        
     </tbody>
     </Table>
     )

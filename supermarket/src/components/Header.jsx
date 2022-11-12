@@ -1,19 +1,12 @@
-export function Header(){
-
-    function changeView(event){
-        console.log(event.target.id);
-    }
-
+export const Header=()=>{
     return (
         <header>
         <div className="wrapper">
             <div className="logo">Logo de divops</div>
             <nav>
-                <a href="#">Inicio</a>
-                <a href="#">Recargar</a>
-                <a href="#" onClick={()=>
-                console.log("HOLA")
-                }>Cambiar vista</a>
+                <a href="/Cliente">Cliente</a>
+                <a href="/Admin">Admin</a>
+                <a href="/Login">Login</a>
             </nav>
         </div>
         </header>
