@@ -6,7 +6,7 @@ export function Productos(){
     let productosCarrito = []
     let productosV = productos
     return (
-        <>
+        <div className='container'>
         <Table striped bordered hover>
     <thead>
         <tr>
@@ -32,9 +32,6 @@ export function Productos(){
                                 productosCarrito.push(producto)
                                 alert('Producto agregado con éxtio, tienes: ' + productosCarrito.length + ' Articulo(s) Añadido(s)')
                                 localStorage.setItem('productos', JSON.stringify(productosCarrito))
-                              
-                                
-                                
                             }}>Agregar al carrito</Button>{' '}</td>
                         </tr>
                     </>
@@ -47,6 +44,6 @@ export function Productos(){
     <div aling="center">
         <Button variant="primary"   href='/carrito'>Ir al carrito</Button>{' '}
     </div>
-    </>
+    </div>
     )
 }

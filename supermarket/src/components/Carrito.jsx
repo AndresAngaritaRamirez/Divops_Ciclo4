@@ -2,14 +2,12 @@ import carrito from "../img/carrito.png";
 import Table from "react-bootstrap/Table";
 import Button from 'react-bootstrap/Button';
 
-
-
 export function Carrito() {
     let productos = JSON.parse(localStorage.getItem('productos'))
   return (
-    <>
+    <div className="container">
       <div align="center">
-        <img src={carrito} width="300px" height="300px"></img>
+        <img src={carrito} width="50px" height="50px"></img>
       </div>
       <Table striped bordered hover>
         <thead>
@@ -22,19 +20,18 @@ export function Carrito() {
         </thead>
         <tbody>
             {
-                productos.map((dato) => {
-                    return (
-                        <>
-                            <tr>
-                                <td>{dato.id}</td>
-                                <td>{dato.nombre}</td>
-                                <td>{dato.preciounidad}</td>
-                                <td><input type="number" id={dato.id}></input></td>
-
-                            </tr>
-                        </>
-                    )
-                } )
+              productos.map((dato) => {
+                  return (
+                    <>
+                      <tr>
+                          <td>{dato.id}</td>
+                          <td>{dato.nombre}</td>
+                          <td>{dato.preciounidad}</td>
+                          <td><input type="number" id={dato.id}></input></td>
+                      </tr>
+                    </>
+                  )
+              } )
             }
         </tbody>
       </Table>
@@ -47,6 +44,6 @@ export function Carrito() {
         })
         alert('Su compra total fue por valor de: $ ' + resultado)
       }} >Realizar compra</Button>{' '}
-    </>
+    </div>
   );
 }
