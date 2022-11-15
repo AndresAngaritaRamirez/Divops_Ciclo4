@@ -4,9 +4,8 @@ import Button from 'react-bootstrap/Button';
 
 
 
-export function Carrito() { 
+export function Carrito() {
     let productos = JSON.parse(localStorage.getItem('productos'))
-  
   return (
     <>
       <div align="center">
@@ -44,12 +43,10 @@ export function Carrito() {
         productos.map((product) => {
         let cantidad = document.getElementById(product.id).value
         resultado += parseInt(product.preciounidad) * cantidad
-          
 
         })
         alert('Su compra total fue por valor de: $ ' + resultado)
       }} >Realizar compra</Button>{' '}
-                      
     </>
   );
 }

@@ -17,6 +17,7 @@ export const Principal = () => {
       <Fragment>
         <Route path="/admin" element={<Admin/>}/>
         <Route path="/cliente" element={<Cliente/>}/>
+        <Route path="/" element={<Login/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/modificar" element={<Modificar/>}/>
         <Route path="/carrito" element={<Carrito/>}/>
