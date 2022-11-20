@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 
 export function Productos(){
     let productosCarrito = []
-    let productosV = productos
+    let productosV = productos 
     return (
         <>
         <Table striped bordered hover>
@@ -17,7 +17,7 @@ export function Productos(){
         </tr>
     </thead>
     <tbody>
-        {
+         {
             productosV.map( data => {
                 return (
                     <>
@@ -41,7 +41,7 @@ export function Productos(){
                 )
             })
 
-        }
+        } 
     </tbody>
     </Table>
     <div aling="center">
