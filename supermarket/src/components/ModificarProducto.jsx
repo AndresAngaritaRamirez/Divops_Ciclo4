@@ -3,6 +3,7 @@ import {productos} from '../Data/Data'
 import Button from 'react-bootstrap/Button';
 
 export function ModificarProducto(){
+   getData()
     let productosV = productos
     localStorage.setItem('productos', JSON.stringify(productosV))
     return (
@@ -35,8 +36,24 @@ export function ModificarProducto(){
                 )
             })
 
-        }
+        } 
+
+      
     </tbody>
     </Table>
     )
+
+
+    function getData() {
+    
+        fetch('http://localhost:3001/products/')
+        .then(data => data.json())
+        .then(data => {
+            console.log('---Datos---')
+            console.log(`${JSON.stringify(data)}`)
+
+        })
+
+     
+    }
 }
