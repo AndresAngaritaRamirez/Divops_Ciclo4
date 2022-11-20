@@ -19,10 +19,29 @@ export const Modificar = () => {
                     <input class="form-control" id="cantidad" placeholder={productoS.cantidad}></input>
                 </div>
                 <center><Button href='/modificarProducto' onClick={() =>{
-                    let nuevo = {'id': productoS.id, 'nombre': document.getElementById('nombre').value, 'preciounidad': document.getElementById('precio').value, 'cantidad': document.getElementById('cantidad').value}
+                    let nuevo = {'nombre': document.getElementById('nombre').value, 'preciounidad': document.getElementById('precio').value, 'cantidad': document.getElementById('cantidad').value}
+                    modificarProducto(nuevo)
                     alert("Producto cambiado por: " + JSON.stringify(nuevo))
                 }} type="submit"  class="btn btn-primary" style={{marginTop: "20px"}}>Actualizar producto</Button></center>
             </form>
         </div>
     )
+
+    function modificarProducto(modificado) {
+        fetch('http://localhost:3001/products',{
+                method:"PUT",
+                body:modificado,
+                headers: {
+                'Content-Type': 'application/json'
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+            }).then(resp => resp.json())
+                .then(resp => {
+                   if( resp.state ){
+                    alert(`Se inserto  ${resp.data}`)
+                   }else{
+                    alert('Id Repetido')
+                   }
+                })
+    }
 }

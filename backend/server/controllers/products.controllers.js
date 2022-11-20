@@ -17,11 +17,12 @@ export const getProducts = async (req, res) => {
 export const createProducts = async (req, res) => {
   
   try {
-    res.set('Access-Control-Allow-Origin','*')
+    
     const { nombre, precio, cantidad } = req.body;
     
 
     const Newproduct = new Product({ nombre, precio, cantidad });
+    res.set('Access-Control-Allow-Origin','*')
     await Newproduct.save();
     return res.json(Newproduct);
   } catch (error) {
