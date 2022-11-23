@@ -1,9 +1,12 @@
 import carrito from "../img/carrito.png";
 import Table from "react-bootstrap/Table";
 import Button from 'react-bootstrap/Button';
+import { useState } from "react";
 
 export function Carrito() {
-    let productos = JSON.parse(localStorage.getItem('productos'))
+    const [productos, setProductos] = useState([{}])
+    const [producto,setProducto] = useState({})
+  
   return (
     <div className="container">
       <div align="center">
@@ -46,4 +49,27 @@ export function Carrito() {
       }} >Realizar compra</Button>{' '}
     </div>
   );
+
+  function llenarCarrito() {
+    let productos
+    let ids = localStorage.getItem('ids')
+
+    ids.map((id)=> {
+      getProducto(id)
+      productos.push(producto)
+      setProductos(productos)
+    })
+
+  }
+
+  function getProducto(id) {
+    fetch(`http://localhost:3001/products/${id}`)
+      .then((data) => data.json())
+      .then((data) => {
+        setProducto(data);
+      });
+  }
+
+
+
 }

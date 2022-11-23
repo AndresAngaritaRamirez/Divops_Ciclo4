@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 
 export const Agregar = () =>{
-    let productos = JSON.parse(localStorage.getItem('productos'))
+    
 
     return(
         <form>
@@ -17,8 +17,8 @@ export const Agregar = () =>{
                 <label class="form-label" for="typeNumber">Cantidad</label>
                 <input type="number" id="cantidad" class="form-control" placeholder="Cantidad en stock"/>
             </div>
-            <center><Button href='/modificarProducto' type="submit" class="btn btn-primary" style={{marginTop: "20px"}} onClick={()=>{
-              let nuevo = JSON.stringify({'nombre': document.getElementById('nombre').value, 'preciounidad': document.getElementById('precio').value,'cantidad': document.getElementById('cantidad').value })
+            <center><Button  href='/modificarProducto' type="submit" class="btn btn-primary" style={{marginTop: "20px"}} onClick={()=>{
+              let nuevo = JSON.stringify({nombre: document.getElementById('nombre').value, precio: document.getElementById('precio').value,cantidad: document.getElementById('cantidad').value })
                 agregarProducto(nuevo)
               
             }}>Agregar</Button></center>
@@ -26,20 +26,17 @@ export const Agregar = () =>{
     )
 
     function agregarProducto(nuevo) {
-        fetch('http://localhost:3001/products',{
-                method:"POST",
-                body:nuevo,
-                headers: {
-                'Content-Type': 'application/json'
-                    // 'Content-Type': 'application/x-www-form-urlencoded',
-                },
-            }).then(resp => resp.json())
-                .then(resp => {
-                   if( resp.state ){
-                    alert(`Se inserto  ${resp.data}`)
-                   }else{
-                    alert('Id Repetido')
-                   }
-                })
+    
+        fetch(`http://localhost:3001/products/`,{
+            method:"POST",
+            body:  nuevo,
+            headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': "*"
+                
+            },
+        }).then(resp => resp.json())
+            
+            
     }
 }

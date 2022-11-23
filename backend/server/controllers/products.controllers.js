@@ -33,6 +33,7 @@ export const createProducts = async (req, res) => {
 
 export const updateProducts = async (req, res) => {
   try {
+  
     const updatedProduct = await Product.findByIdAndUpdate(
       req.params.id,
       req.body,
@@ -50,7 +51,7 @@ export const deleteProducts = async (req, res) => {
   try {
     const productRemoved = await Product.findByIdAndDelete(req.params.id);
 
-    if (!productRemoved) {
+   /*  if (!productRemoved) {
       return res.sendStatus(404);
     } else {
 
@@ -58,7 +59,9 @@ export const deleteProducts = async (req, res) => {
         await deleteImage(productRemoved.image.public_id);
       }
       return res.sendStatus(204);
-    }
+    } */
+
+    return res.send(productRemoved)
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
@@ -66,6 +69,7 @@ export const deleteProducts = async (req, res) => {
 
 export const getProduct = async (req, res) => {
   try {
+    res.set('Access-Control-Allow-Origin','*')
     const OneProduct = await Product.findById(req.params.id);
 
     if (!OneProduct) {
