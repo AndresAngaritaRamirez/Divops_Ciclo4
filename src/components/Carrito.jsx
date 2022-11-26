@@ -6,7 +6,7 @@ import { useState } from "react";
 export function Carrito() {
     const [productos, setProductos] = useState([{}])
     const [producto,setProducto] = useState({})
-  
+
   return (
     <div className="container">
       <div align="center">
@@ -69,7 +69,4 @@ export function Carrito() {
         setProducto(data);
       });
   }
-
-
-
 }
